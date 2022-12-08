@@ -16,10 +16,17 @@ const sortOrder = (arr) => {
       }
     });
 
-    finalArray.push([...new Set(temp)]);
+    finalArray.push([...new Set(temp)].filter((e) => e !== ""));
   }
 
   console.log(finalArray);
 };
 
-sortOrder(["a-b-c-d", "a-b-f-g", "m-n-l-k", "m-o-p-j", "v-q-w-e", "x-z-p-j"]);
+sortOrder([
+  "a-b-c-d",
+  "a-b-f-g-r",
+  "m-n-l-k",
+  "m-o-p-j-t-o",
+  "v-q-w-e",
+  "x-z-p-j",
+]);
